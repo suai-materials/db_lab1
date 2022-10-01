@@ -2816,11 +2816,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\DataBase\\DataBase\\DataBase.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\labs\\04.01\\db_lab1\\DataBase\\DataBase.csproj",
       "projectName": "DataBase",
-      "projectPath": "C:\\Users\\user\\Desktop\\DataBase\\DataBase\\DataBase.csproj",
+      "projectPath": "C:\\Users\\user\\Desktop\\labs\\04.01\\db_lab1\\DataBase\\DataBase.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\DataBase\\DataBase\\obj\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\labs\\04.01\\db_lab1\\DataBase\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

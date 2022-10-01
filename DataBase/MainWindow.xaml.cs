@@ -15,8 +15,8 @@ namespace DataBase
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string QueryString = "SELECT * FROM Students WHERE Фамилия = ?";
-        private const string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\user\Desktop\DataBase\DataBase\db\College.mdb;Persist Security Info=False";
+        private string QueryString = "SELECT * FROM Students WHERE Familia LIKE ?";
+        private const string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\db\College.mdb;Persist Security Info=False";
         OleDbConnection connection = new OleDbConnection(ConnectionString);
         public MainWindow()
         {
@@ -24,11 +24,10 @@ namespace DataBase
             connection.Open();
             var table = new DataTable();
             var command = new OleDbCommand(QueryString, connection);
-            command.Parameters.Add("*");
+            command.Parameters.Add( "?", OleDbType.VarChar, 80 ).Value = "%";
             var adapter = new OleDbDataAdapter(command);
             adapter.Fill(table);
             data.ItemsSource = table.DefaultView;
-            data.UpdateLayout();
             connection.Close();
         }
 
@@ -37,8 +36,11 @@ namespace DataBase
             connection.Open();
             var table = new DataTable();
             var command = new OleDbCommand(QueryString, connection);
-            command.Parameters.Add(Familia.Text);
-            var adapter = new OleDbDataAdapter(new OleDbCommand(QueryString, connection));
+            command.Parameters.Add( "?", OleDbType.VarChar, 80 ).Value = $"{Familia.Text}%";
+            var adapter = new OleDbDataAdapter(command);
+            adapter.Fill(table);
+            data.ItemsSource = table.DefaultView;
+            connection.Close();
         }
     }
 }
