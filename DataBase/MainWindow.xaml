@@ -16,6 +16,7 @@
             <TextBlock>Фамилия:</TextBlock>
             <TextBox Name="Familia" Text="" Width="300"></TextBox>
             <Button Click="Search"> Поиск</Button>
+            <CheckBox Checked="ToggleButton_OnChecked" Unchecked="ToggleButton_OnUnchecked" Content="Юноши с возрастом" Margin="50, 0, 0, 0"></CheckBox>
         </StackPanel>
     </Grid>
 </Window>
