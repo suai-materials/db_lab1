@@ -52,7 +52,7 @@ namespace DataBase
             OpenConnection();
             _queryNow = Query ?? _queryNow;
             var command = new OleDbCommand(Query ?? _queryNow, connection);
-            command.Parameters.Add( "?", OleDbType.VarChar, 80 ).Value = $"%{Familia.ToLower()}%";
+            command.Parameters.Add( "?", OleDbType.VarChar, 80 ).Value = $"%{Familia.ToLowerInvariant()}%";
             ReloadTable(command);
         }
         
@@ -61,7 +61,7 @@ namespace DataBase
             OpenConnection();
             _queryNow = Query ?? _queryNow;
             var command = new OleDbCommand(_queryNow, connection);
-            command.Parameters.Add("?", OleDbType.VarChar, 80).Value = $"%{Familia.ToLower()}%" ;
+            command.Parameters.Add("?", OleDbType.VarChar, 80).Value = $"%{Familia.ToLowerInvariant()}%" ;
             command.Parameters.Add( "@group", OleDbType.VarChar, 6).Value = groupName;
             ReloadTable(command);
         }
@@ -72,7 +72,7 @@ namespace DataBase
             _queryNow = Query ?? _queryNow;
             var command = new OleDbCommand(_queryNow, connection);
             command.Parameters.AddWithValue("@year", year);
-            command.Parameters.Add( "?", OleDbType.VarChar, 80 ).Value = $"%{Familia.ToLower()}%";
+            command.Parameters.Add( "?", OleDbType.VarChar, 80 ).Value = $"%{Familia.ToLowerInvariant()}%";
             
             ReloadTable(command);
         }
