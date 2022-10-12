@@ -22,7 +22,7 @@ namespace DataBase
         private string _queryNow;
         private const string ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\db\college2.mdb;Persist Security Info=False";
         private int _year;
-        private OleDbConnection connection = new OleDbConnection(ConnectionString);
+        private OleDbConnection connection = new(ConnectionString);
         public MainWindow()
         {
             InitializeComponent();
