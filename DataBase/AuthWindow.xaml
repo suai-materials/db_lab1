@@ -5,7 +5,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:DataBase"
         mc:Ignorable="d"
-        Title="AuthWindow" Height="450" Width="800">
+        Title="AuthWindow" Height="600" Width="800" MinHeight="600" MinWidth="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -17,16 +17,23 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <TextBlock Margin="10" Foreground="Chocolate" FontSize="18" TextAlignment="Center"  Name="ErrorMessage" Grid.Column="1" VerticalAlignment="Bottom"></TextBlock>
         <StackPanel HorizontalAlignment="Stretch"  VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
             <DockPanel Margin="10" HorizontalAlignment="Stretch">
                 <TextBlock >Логин</TextBlock>
-                <TextBox Name="Login" Margin="18,0,10,0" HorizontalAlignment="Stretch"></TextBox>
+                <TextBox Name="Login" Margin="28,0,10,0" HorizontalAlignment="Stretch"></TextBox>
             </DockPanel>
             <DockPanel Margin="10" HorizontalAlignment="Stretch">
                 <TextBlock >Пароль</TextBlock>
-                <PasswordBox Name="Password" Margin="10,0,10,0" HorizontalAlignment="Stretch"></PasswordBox>
+                <PasswordBox Name="Password" Margin="20,0,10,0" HorizontalAlignment="Stretch"></PasswordBox>
             </DockPanel>
-            <Button Click="Auth" Margin="10" Content="Вход"></Button>
+            <DockPanel Name="SecPasswordPanel" Visibility="Collapsed" Margin="10" HorizontalAlignment="Stretch">
+                <TextBlock >Пароль 2</TextBlock>
+                <PasswordBox Name="SecondPassword" Margin="10,0,10,0" HorizontalAlignment="Stretch"></PasswordBox>
+            </DockPanel>
+            <Button Name="AuthBtn" Click="Auth" Margin="10" Content="Вход"></Button>
+            <Button Click="ToReg" Name="SwitchBtn" Margin="10" Content="Перейти к регистрации"></Button>
+
         </StackPanel>
     </Grid>
 </Window>

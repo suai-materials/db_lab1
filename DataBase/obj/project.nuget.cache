@@ -1,11 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "d2bZpUc7I2sWLLW0y5DpgT2TbIJIrt6OVbMGUvfE131vuVyJhqyqhLbCZ1iulO3zJcPy7R44IbGq1OZmWn2NnQ==",
+  "dgSpecHash": "A4n+XRPXc9lZaFSvPfDmfDSBKXT4K0PyVdJlmIPlHQg1jwMzU0xttKb/XWaEhtqkJlItuk86IGQZAldvLXstkw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\labs\\04.01\\db_lab1\\DataBase\\DataBase.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\documentformat.openxml\\2.18.0\\documentformat.openxml.2.18.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.objectpool\\5.0.10\\microsoft.extensions.objectpool.5.0.10.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net461\\1.0.2\\microsoft.netframework.referenceassemblies.net461.1.0.2.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1001\\microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.registry.accesscontrol\\6.0.0\\microsoft.win32.registry.accesscontrol.6.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",

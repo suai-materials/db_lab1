@@ -306,3 +306,5 @@ C:\Users\pankSU\Desktop\db_lab1\DataBase\obj\Debug\net6.0-windows\DataBase.genru
 C:\Users\pankSU\Desktop\db_lab1\DataBase\obj\Debug\net6.0-windows\ref\DataBase.dll
 C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\obj\Debug\net6.0-windows\AuthWindow.g.cs
 C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\obj\Debug\net6.0-windows\AuthWindow.baml
+C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\bin\Debug\net6.0-windows\Microsoft.Office.Interop.Excel.dll
+C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\bin\Debug\net6.0-windows\DocumentFormat.OpenXml.dll

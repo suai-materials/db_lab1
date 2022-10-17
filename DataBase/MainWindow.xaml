@@ -13,7 +13,7 @@
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <DataGrid Name="data"></DataGrid>
+        <DataGrid CellEditEnding="Data_OnCellEditEnding" Name="data"></DataGrid>
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Orientation="Horizontal">
             <TextBlock>Фамилия:</TextBlock>
             <TextBox Name="Familia" Text="" Width="300"></TextBox>
@@ -26,14 +26,17 @@
             <TextBox Visibility="Collapsed" Name="Group" Width="300"></TextBox>
             <Button Visibility="Collapsed" Name="GroupButton" Click="SearchByGroup"> Поиск</Button>
             <CheckBox Margin="10, 0, 0, 0" Name="OutOfTown" Checked="OutOfTown_OnChecked" Unchecked="OutOfTown_OnUnchecked" Content="Иногородние студенты"></CheckBox>
-            <Button Click="Reform1" Margin="10, 0, 0, 0" Content="Образовательная реформа № 1"></Button>
+            <Button Click="Reform1" Name="Reform1Btn" Margin="10, 0, 0, 0" Content="Образовательная реформа № 1"></Button>
         </StackPanel>
         <StackPanel Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Stretch" Orientation="Horizontal">
             <CheckBox Unchecked="YearSearch_OnUnchecked" Checked="YearSearch_OnChecked" Content="Поиск по году рождения" Name="YearSearch"></CheckBox>
             <TextBlock Name="YearText" Visibility="Collapsed" Margin="20, 0, 0, 0" Text="Год рождения:"></TextBlock>
             <TextBox Visibility="Collapsed" Name="Year" Width="300"></TextBox>
             <Button Visibility="Collapsed" Click="YearButton_OnClick" Name="YearButton" > Поиск</Button>
-            <Button Click="Reform2" Margin="10, 0, 0, 0" Content="Образовательная реформа № 2"></Button>
+            <Button Click="Reform2" Name="Reform2Btn" Margin="10, 0, 0, 0" Content="Образовательная реформа № 2"></Button>
+            <Button Click="Exit" Name="ExitBtn" IsCancel="True"  Margin="10, 0, 0, 0" Content="Войти в другой аккаунт"></Button>
+            <Button Click="Import" Name="ExcelImportBtn" IsCancel="True"  Margin="10, 0, 0, 0" Content="Import to Excel"></Button>
+
         </StackPanel>
     </Grid>
 </Window>
