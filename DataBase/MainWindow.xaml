@@ -3,39 +3,42 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DataBase"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="10*"></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
-            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        <DataGrid CellEditEnding="Data_OnCellEditEnding" Name="data"></DataGrid>
+        <DataGrid CellEditEnding="Data_OnCellEditEnding" Name="data" />
         <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Stretch" Orientation="Horizontal">
             <TextBlock>Фамилия:</TextBlock>
-            <TextBox Name="Familia" Text="" Width="300"></TextBox>
+            <TextBox Name="Familia" Text="" Width="300" />
             <Button Click="Search"> Поиск</Button>
-            <CheckBox Name="YoungMen" Checked="ToggleButton_OnChecked" Unchecked="ToggleButton_OnUnchecked" Content="Юноши с возрастом" Margin="50, 0, 0, 0"></CheckBox>
+            <CheckBox Name="YoungMen" Checked="ToggleButton_OnChecked" Unchecked="ToggleButton_OnUnchecked"
+                      Content="Юноши с возрастом" Margin="50, 0, 0, 0" />
         </StackPanel>
         <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Stretch" Orientation="Horizontal">
-            <CheckBox Checked="GroupSearch_OnChecked" Unchecked="GroupSearch_OnUnchecked" Content="Поиск по группе" Name="GroupSearch"></CheckBox>
-            <TextBlock Name="GroupText" Visibility="Collapsed" Margin="20, 0, 0, 0" Text="Номер группы:"></TextBlock>
-            <TextBox Visibility="Collapsed" Name="Group" Width="300"></TextBox>
+            <CheckBox Checked="GroupSearch_OnChecked" Unchecked="GroupSearch_OnUnchecked" Content="Поиск по группе"
+                      Name="GroupSearch" />
+            <TextBlock Name="GroupText" Visibility="Collapsed" Margin="20, 0, 0, 0" Text="Номер группы:" />
+            <TextBox Visibility="Collapsed" Name="Group" Width="300" />
             <Button Visibility="Collapsed" Name="GroupButton" Click="SearchByGroup"> Поиск</Button>
-            <CheckBox Margin="10, 0, 0, 0" Name="OutOfTown" Checked="OutOfTown_OnChecked" Unchecked="OutOfTown_OnUnchecked" Content="Иногородние студенты"></CheckBox>
-            <Button Click="Reform1" Name="Reform1Btn" Margin="10, 0, 0, 0" Content="Образовательная реформа № 1"></Button>
+            <CheckBox Margin="10, 0, 0, 0" Name="OutOfTown" Checked="OutOfTown_OnChecked"
+                      Unchecked="OutOfTown_OnUnchecked" Content="Иногородние студенты" />
+            <Button Click="Reform1" Name="Reform1Btn" Margin="10, 0, 0, 0" Content="Образовательная реформа № 1" />
         </StackPanel>
         <StackPanel Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Stretch" Orientation="Horizontal">
-            <CheckBox Unchecked="YearSearch_OnUnchecked" Checked="YearSearch_OnChecked" Content="Поиск по году рождения" Name="YearSearch"></CheckBox>
-            <TextBlock Name="YearText" Visibility="Collapsed" Margin="20, 0, 0, 0" Text="Год рождения:"></TextBlock>
-            <TextBox Visibility="Collapsed" Name="Year" Width="300"></TextBox>
-            <Button Visibility="Collapsed" Click="YearButton_OnClick" Name="YearButton" > Поиск</Button>
-            <Button Click="Reform2" Name="Reform2Btn" Margin="10, 0, 0, 0" Content="Образовательная реформа № 2"></Button>
-            <Button Click="Exit" Name="ExitBtn" IsCancel="True"  Margin="10, 0, 0, 0" Content="Войти в другой аккаунт"></Button>
-            <Button Click="Import" Name="ExcelImportBtn" IsCancel="True"  Margin="10, 0, 0, 0" Content="Import to Excel"></Button>
+            <CheckBox Unchecked="YearSearch_OnUnchecked" Checked="YearSearch_OnChecked"
+                      Content="Поиск по году рождения" Name="YearSearch" />
+            <TextBlock Name="YearText" Visibility="Collapsed" Margin="20, 0, 0, 0" Text="Год рождения:" />
+            <TextBox Visibility="Collapsed" Name="Year" Width="300" />
+            <Button Visibility="Collapsed" Click="YearButton_OnClick" Name="YearButton"> Поиск</Button>
+            <Button Click="Reform2" Name="Reform2Btn" Margin="10, 0, 0, 0" Content="Образовательная реформа № 2" />
+            <Button Click="Exit" Name="ExitBtn" IsCancel="True" Margin="10, 0, 0, 0" Content="Войти в другой аккаунт" />
+            <Button Click="Import" Name="ExcelImportBtn" IsCancel="True" Margin="10, 0, 0, 0" Content="Import to Excel" />
 
         </StackPanel>
     </Grid>

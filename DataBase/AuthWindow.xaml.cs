@@ -12,7 +12,7 @@ public partial class AuthWindow : Window
 {
     private Mode _mode = Mode.Auth;
 
-    private Dictionary<Mode, String> modeToQuery = new Dictionary<Mode, string>()
+    private Dictionary<Mode, string> modeToQuery = new()
     {
         {Mode.Auth, "SELECT user_id, role FROM users WHERE login = @login AND password = @pass"},
         {Mode.Reg, "INSERT INTO users ([login], [password]) VALUES (@login, @pass)"}
@@ -28,12 +28,12 @@ public partial class AuthWindow : Window
     {
         try
         {
-            OleDbConnection connection =
+            var connection =
                 new OleDbConnection(
                     @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\db\college.mdb;Persist Security Info=False");
 
             connection.Open();
-            using (SHA256 mySha256 = SHA256.Create())
+            using (var mySha256 = SHA256.Create())
             {
                 if (Login.Text.Trim() == "")
                 {
@@ -46,6 +46,7 @@ public partial class AuthWindow : Window
                     ErrorMessage.Text = "Пароль не должен быть пустым";
                     return;
                 }
+
                 if (_mode == Mode.Reg)
                 {
                     if (Password.Password != SecondPassword.Password)
@@ -53,13 +54,21 @@ public partial class AuthWindow : Window
                         ErrorMessage.Text = "Пароли не совпадают";
                         return;
                     }
-                    
+
+                    var checkThisLoginCommand =
+                        new OleDbCommand("SELECT user_id FROM users WHERE login = @login", connection);
+                    checkThisLoginCommand.Parameters.Add("@login", OleDbType.VarChar, 80).Value = Login.Text;
+                    if (checkThisLoginCommand.ExecuteScalar() != null)
+                    {
+                        ErrorMessage.Text = "Такой логин уже существует";
+                        return;
+                    }
                 }
 
-                var passwordHash = String.Join("",
+                var passwordHash = string.Join("",
                     mySha256.ComputeHash(new UTF8Encoding().GetBytes(Password.Password)).Select(b => $"{b:X}")
                         .ToArray()).ToLowerInvariant();
-                OleDbCommand command = new OleDbCommand(modeToQuery[_mode], connection);
+                var command = new OleDbCommand(modeToQuery[_mode], connection);
                 command.Parameters.Add("@login", OleDbType.VarChar, 80).Value = Login.Text;
                 command.Parameters.Add("@pass", OleDbType.VarChar, 80).Value = passwordHash;
                 if (_mode == Mode.Reg)
@@ -71,7 +80,9 @@ public partial class AuthWindow : Window
 
                 var user = command.ExecuteReader();
                 if (!user.HasRows)
+                {
                     ErrorMessage.Text = "Неверный логин или пароль";
+                }
                 else
                 {
                     user.Read();
@@ -80,7 +91,7 @@ public partial class AuthWindow : Window
 
                     var window = new MainWindow(userId, roleId);
                     window.Show();
-                    this.Close();
+                    Close();
                 }
             }
         }

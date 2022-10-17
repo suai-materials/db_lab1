@@ -3,36 +3,36 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:local="clr-namespace:DataBase"
         mc:Ignorable="d"
         Title="AuthWindow" Height="600" Width="800" MinHeight="600" MinWidth="400">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
-            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <TextBlock Margin="10" Foreground="Chocolate" FontSize="18" TextAlignment="Center"  Name="ErrorMessage" Grid.Column="1" VerticalAlignment="Bottom"></TextBlock>
-        <StackPanel HorizontalAlignment="Stretch"  VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
+        <TextBlock Margin="10" Foreground="Chocolate" FontSize="18" TextAlignment="Center" Name="ErrorMessage"
+                   Grid.Column="1" VerticalAlignment="Bottom" />
+        <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1">
             <DockPanel Margin="10" HorizontalAlignment="Stretch">
-                <TextBlock >Логин</TextBlock>
-                <TextBox Name="Login" Margin="28,0,10,0" HorizontalAlignment="Stretch"></TextBox>
+                <TextBlock>Логин</TextBlock>
+                <TextBox Name="Login" Margin="28,0,10,0" HorizontalAlignment="Stretch" />
             </DockPanel>
             <DockPanel Margin="10" HorizontalAlignment="Stretch">
-                <TextBlock >Пароль</TextBlock>
-                <PasswordBox Name="Password" Margin="20,0,10,0" HorizontalAlignment="Stretch"></PasswordBox>
+                <TextBlock>Пароль</TextBlock>
+                <PasswordBox Name="Password" Margin="20,0,10,0" HorizontalAlignment="Stretch" />
             </DockPanel>
             <DockPanel Name="SecPasswordPanel" Visibility="Collapsed" Margin="10" HorizontalAlignment="Stretch">
-                <TextBlock >Пароль 2</TextBlock>
-                <PasswordBox Name="SecondPassword" Margin="10,0,10,0" HorizontalAlignment="Stretch"></PasswordBox>
+                <TextBlock>Пароль 2</TextBlock>
+                <PasswordBox Name="SecondPassword" Margin="10,0,10,0" HorizontalAlignment="Stretch" />
             </DockPanel>
-            <Button Name="AuthBtn" Click="Auth" Margin="10" Content="Вход"></Button>
-            <Button Click="ToReg" Name="SwitchBtn" Margin="10" Content="Перейти к регистрации"></Button>
+            <Button Name="AuthBtn" Click="Auth" Margin="10" Content="Вход" />
+            <Button Click="ToReg" Name="SwitchBtn" Margin="10" Content="Перейти к регистрации" />
 
         </StackPanel>
     </Grid>

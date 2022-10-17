@@ -189,7 +189,6 @@ C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\obj\Debug\net6.0-windows\DataB
 C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\obj\Debug\net6.0-windows\DataBase_MarkupCompile.cache
-C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\obj\Debug\net6.0-windows\DataBase_MarkupCompile.lref
 C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\obj\Debug\net6.0-windows\MainWindow.baml
 C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\obj\Debug\net6.0-windows\DataBase.g.resources
 C:\Users\user\Desktop\labs\04.01\db_lab1\DataBase\obj\Debug\net6.0-windows\DataBase.GeneratedMSBuildEditorConfig.editorconfig
